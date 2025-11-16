@@ -63,13 +63,17 @@ local.properties
 .factorypath
 
 ##############################
-## NetBeans
+## NetBeans (MELHORADO)
 ##############################
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
+# Ignora a pasta private em qualquer subdiretório
+**/nbproject/private/
+# Ignora arquivos de build e manifest em qualquer subdiretório
+**/build/
+**/dist/
+**/nbbuild/
+**/nbdist/
+**/build.xml
+**/manifest.mf
 nbactions.xml
 nb-configuration.xml
 
@@ -88,4 +92,3 @@ nb-configuration.xml
 ## Miscellaneous
 ##############################
 *.log
-
