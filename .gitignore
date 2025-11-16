@@ -67,6 +67,7 @@ local.properties
 ##############################
 # Ignora a pasta private em qualquer subdiretório
 **/nbproject/private/
+**/nbproject/
 # Ignora arquivos de build e manifest em qualquer subdiretório
 **/build/
 **/dist/
