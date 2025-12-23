@@ -28,16 +28,17 @@ Abaixo, a estrutura de pastas conforme organizada no ambiente de desenvolvimento
 
 ```bash
 MENTORIA_JAVA_2025/
-├── desafios_praticos_mentoria/   # Projetos e desafios extras da mentoria
-├── exercicios_curso/            # Exercícios práticos divididos por módulo
-│   ├── estrutura_sequencial/    # Lógica inicial e entrada de dados
-│   └── exercicios_fixacao/      # Reforço de conceitos específicos
-│       ├── classes-atributos-membros-estaticos/
-│       └── tratamento-de-excecoes/
-├── .gitignore                   # Arquivos ignorados pelo Git
-└── README.md                    # Documentação do repositório
-
+├── desafios_praticos_mentoria/        # Projetos e desafios extras da mentoria
+├── exercicios_curso/                  # Exercícios práticos divididos por módulo
+│   ├── estrutura_sequencial/          # Exercícios de lógica inicial e entrada de dados
+│   ├── exercicios_fixacao/            # Reforço de conceitos específicos
+│   │   ├── classes-atributos-membros-estaticos/   # Prática com atributos e membros estáticos
+│   │   └── tratamento-de-excecoes/                # Exercícios sobre exceções e erros
+│   └── exercicios_exemplo/            # Exemplos prontos para consulta e revisão futura
+├── .gitignore                         # Arquivos e pastas ignorados pelo Git
+└── README.md 
 ```
+
 ## 🛠️ Como Baixar e Testar
 
 Se desejar explorar os códigos localmente, siga os passos abaixo:
