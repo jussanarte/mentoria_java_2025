@@ -45,10 +45,13 @@ public class Main {
             System.out.println("Reservation: " + reservation);
         }
         catch(DateTimeParseException e){
-            System.err.println("Invalid Date format!");
+            System.err.println("Invalid Date Format!");
         }
         catch(DomainException e){
             System.err.println("Error in reservation: " + e.getMessage());
+        }
+        catch(RuntimeException e){
+             System.err.println("Unexpected Error!");
         }
         finally{
           sc.close();  
