@@ -9,6 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 import reservation.model.Reservation;
+import reservation.model.exceptions.DomainException;
 
 /**
  *
@@ -30,23 +31,23 @@ public class Main {
             LocalDate checkIn = LocalDate.parse(sc.next(), fmt);
             System.out.print("Check-out date (dd/MM/yyyy): ");
             LocalDate checkOut = LocalDate.parse(sc.next(), fmt);
+            
+            Reservation reservation = new Reservation(number, checkIn, checkOut);
+            System.out.println("Reservation: " + reservation);
 
-            System.out.print("Enter data to update the reservation: ");
+            System.out.println("Enter data to update the reservation: ");
             System.out.print("Check-in date (dd/MM/yyyy): ");
             checkIn = LocalDate.parse(sc.next(), fmt);
             System.out.print("Check-out date (dd/MM/yyyy): ");
             checkOut = LocalDate.parse(sc.next(), fmt);
 
-            Reservation reservation = new Reservation(number, checkIn, checkOut);
-            System.out.println(reservation);
-
             reservation.updateDates(checkIn, checkOut);
-            System.out.println(reservation);
+            System.out.println("Reservation: " + reservation);
         }
         catch(DateTimeParseException e){
             System.err.println("Invalid Date format!");
         }
-        catch(IllegalArgumentException e){
+        catch(DomainException e){
             System.err.println("Error in reservation: " + e.getMessage());
         }
         finally{
