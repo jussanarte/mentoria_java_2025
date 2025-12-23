@@ -17,14 +17,27 @@ public class SensorTemperatura {
     private double leituraMinima;
     private double somaLeituras;
     private int quantidadeLeituras;
-   
-    public SensorTemperatura(String identificador, String local) {
-        this.identificador = identificador;
-        this.local = local;
+
+    public SensorTemperatura() {
+        identificador = null;
+        local = null;
         leituraMaxima = 0;
         leituraMinima = 0;
         somaLeituras = 0;
         quantidadeLeituras = 0;
+    }
+
+    public SensorTemperatura(String identificador) {
+        super();
+        this.identificador = identificador;
+    }
+    
+    
+   
+    public SensorTemperatura(String identificador, String local) {
+        super();
+        this.identificador = identificador;
+        this.local = local;
     }
 
     public String getIdentificador() {
@@ -76,6 +89,20 @@ public class SensorTemperatura {
             return 0.0; 
         }
         return leituraMaxima - leituraMinima;
+    }
+
+    @Override
+    public String toString() {
+        String strIntervalo = String.format("%.2f", obterIntervalo());
+        String strMedia = String.format("%.2f", obterMedia());
+        StringBuilder sb = new StringBuilder();
+        sb.append("Identificador: ").append(identificador);
+        sb.append("\nLocal: ").append(local);
+        sb.append("\nLeitura Maxima: ").append(leituraMaxima);
+        sb.append("\nLeitura Minima: ").append(leituraMinima);
+        sb.append("\nMedia: ").append(strMedia);
+        sb.append("\nIntervalo: ").append(strIntervalo);
+        return sb.toString();
     }
     
     
