@@ -1,14 +1,6 @@
-Seu rascunho já tem uma base sólida! Para transformá-lo em um README de nível profissional (que chame a atenção de recrutadores ou ajude outros alunos), vamos adicionar camadas de organização e clareza.
+# 🚀 Mentoria e Códigos - Java Completo (Nélio Alves)
 
-Aqui está uma proposta de melhoria estruturada:
-
----
-
-# 🚀 Mentoria e Códigos - Java Completo (Nelio Alves)
-
-Bem-vindo(a)! Este repositório foi criado para documentar minha jornada de mentoria e aprendizado no curso **"Java Completo: Do Básico ao Avançado"** do professor Nelio Alves. Aqui você encontrará códigos-fonte, resoluções de exercícios e anotações teóricas.
-
----
+Bem-vindo(a)! Este repositório foi criado para documentar minha jornada de mentoria e aprendizado no curso **"Java Completo: Do Básico ao Avançado"** do professor Nélio Alves. Aqui você encontrará códigos-fonte, resoluções de exercícios e anotações teóricas.
 
 ## 📊 Status do Aprendizado
 
