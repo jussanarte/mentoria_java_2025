@@ -16,8 +16,7 @@ public class Rectangle {
         this.height = height;
         this.width = width;
     }
-
-
+    
     public double getHeight() {
         return height;
     }
