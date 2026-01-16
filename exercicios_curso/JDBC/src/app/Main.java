@@ -4,21 +4,31 @@
  */
 package app;
 
+import db.*;
 import java.sql.Connection;
-import db.DB;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-/**
- *
- * @author juuhl
- */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-       Connection conn = DB.getConnection();
-       DB.closeConnection();
+
+        String sql = "SELECT id, name FROM department";
+
+        try (
+            Connection conn = DB.getConnection();
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql)
+        ) {
+            while (rs.next()) {
+                System.out.println(
+                    rs.getInt("id") + ", " + rs.getString("name")
+                );
+            }
+
+        } catch (SQLException ex) {
+            throw new DbException(ex.getMessage());
+        }
     }
-    
 }
