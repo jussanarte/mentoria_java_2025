@@ -2,22 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package exercicio7;
+package exercicio07;
 
 /**
  *
  * @author juuhl
  */
-public class Camiao extends Veiculo {
-    int capacidadeCargaToneladas;
-    int numeroEixos;
-    
+public class Veiculo {
+   String matricula;
+   String marca;
+   String modelo;
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(super.toString());
-        sb.append("\nCapacidade de carga em toneladas: ").append(capacidadeCargaToneladas);
-        sb.append("\nNumero de Eixos: ").append(numeroEixos);
+        sb.append("Matricula: ").append(matricula);
+        sb.append("\nMarca: ").append(marca);
+        sb.append("\nModel: ").append(modelo);
         return sb.toString();
     }
+   
+   
 }
