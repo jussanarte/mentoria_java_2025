@@ -4,11 +4,14 @@
  */
 package account.model.entities;
 
+import reservation.model.exceptions.DomainException;
+
 /**
  *
  * @author juuhl
  */
 public class Account {
+
     private Integer number;
     private String holder;
     private Double balance;
@@ -44,17 +47,24 @@ public class Account {
     public void setWithdrawLimit(Double withdrawLimit) {
         this.withdrawLimit = withdrawLimit;
     }
-    
-    public void deposit(Double amount){
-        if(amount > 0){
+
+    public void deposit(Double amount) {
+        if (amount > 0) {
             balance += amount;
         }
     }
-    
-    public void withdraw(Double amount){
-        if(amount > 0 && amount < withdrawLimit){
-            balance -= amount;
+
+    public void withdraw(Double amount) {
+        if (amount > withdrawLimit) {
+            throw new DomainException("Withdraw Error: the amount exceeds withdraw limit.");
         }
+        if (amount > balance) {
+            throw new DomainException("Withdraw Error:  Not enough balance");
+        }
+        if (amount < 0) {
+            throw new DomainException("Withdraw Error: the amount is negative.");
+        }
+        balance -= amount;
     }
-    
+
 }
